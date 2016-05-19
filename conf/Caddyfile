@@ -1,0 +1,30 @@
+:443
+
+header / Strict-Transport-Security "max-age=31536000"
+
+tls /cert/server.crt /cert/server.key
+
+basicauth /admin hugo hugo
+
+root      /srv/static/public
+
+hugo /srv/hugo {
+	buildDrafts
+	theme   hugo-uno
+}
+
+log /log/access.log {
+  rotate {
+		size 10
+		age  15
+		keep 10
+	}
+}
+
+errors {
+	log /log/error.log {
+		size 10 # Rotate after 50 MB
+		age  15 # Keep rotated files for 30 days
+		keep 10 # Keep at most 5 log files
+	}
+}
