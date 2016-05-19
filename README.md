@@ -4,13 +4,13 @@ A [Docker](http://docker.com) image for [Caddy](http://caddyserver.com).
 
 ## config
 
-** mount the folder contain your caddy file: -v /somefolder:/config
-** mount log folder -v /logfolder:/log
-** mount root folder -v /root:/srv
+* mount the folder contain your caddy file: -v /somefolder:/config
+* mount log folder -v /logfolder:/log
+* mount root folder -v /root:/srv
 
 ## Tls
 
-** a self signed certificate is contained in /cert folder. For local test purpose just add tls direct into caddyfile
+* a self signed certificate is contained in /cert folder. For local test purpose just add tls direct into caddyfile
 
 ##### Run the image
 
