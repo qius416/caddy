@@ -6,12 +6,13 @@ tls /cert/server.crt /cert/server.key
 
 basicauth /admin hugo hugo
 
-root      /srv/static/public
+root      /srv/public
 
-hugo /srv/hugo {
-	buildDrafts
-	theme   hugo-uno
-}
+hugo /srv
+#{
+#	buildDrafts
+#	theme   hugo-identity-theme
+#}
 
 log /log/access.log {
   rotate {
