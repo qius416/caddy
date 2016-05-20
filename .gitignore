@@ -1,2 +1,2 @@
-/srv
-/log
+/srv/*
+*.log

@@ -9,10 +9,6 @@ basicauth /admin hugo hugo
 root      /srv/public
 
 hugo /srv
-#{
-#	buildDrafts
-#	theme   hugo-identity-theme
-#}
 
 log /log/access.log {
   rotate {
